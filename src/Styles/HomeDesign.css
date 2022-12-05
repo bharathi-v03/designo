@@ -1,0 +1,125 @@
+.Design__Card {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    height: 800px;
+    width: auto;
+    padding: 8rem 6rem;
+}
+
+.Design__Card1 {
+    flex: 50%;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Design__Cards23 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    flex: 50%;
+    width: 100%;
+}
+
+.Design__Card2,
+.Design__Card3 {
+    height: 50%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Design__Card1,
+.Design__Card2,
+.Design__Card3 {
+    position: relative;
+    z-index: 97;
+}
+
+.Card__Caption {
+    position: absolute;
+    z-index: 98;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondaryColor);
+    text-align: center;
+    width: 100%;
+}
+
+.Card__Caption1 {
+    font-size: 250%;
+    margin-bottom: 20px;
+}
+
+.gt {
+    color: var(--mainColor);
+    font-weight: 900;
+}
+
+.webDesign,
+.appDesign,
+.graphicDesign {
+    filter: grayscale(100%) brightness(40%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.Design__Card1:hover>.webDesign,
+.Design__Card2:hover>.appDesign,
+.Design__Card3:hover>.graphicDesign {
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 1024px) {
+    .Design__Card {
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 2rem 2rem;
+        height: calc(100vw - 4rem);
+    }
+
+    .Design__Card1 {
+        height: calc((100vw)/3 - 4rem);
+        flex: auto;
+    }
+
+    .Design__Cards23 {
+        flex: auto;
+        row-gap: 10px;
+    }
+
+    .Design__Card2,
+    .Design__Card3 {
+        height: calc((100vw)/3 - 4rem);
+        flex: auto;
+    }
+
+    .Card__Caption1 {
+        font-size: 150%;
+    }
+
+    .Card__Caption2 {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .Design__Card {
+        height: calc((100vw)*3 - 4rem);
+    }
+
+    .Design__Card1 {
+        height: calc((100vw)*1 - 4rem);
+    }
+
+    .Design__Card2,
+    .Design__Card3 {
+        height: calc((100vw)*1 - 4rem);
+    }
+}

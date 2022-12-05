@@ -1,0 +1,119 @@
+.Home {
+    color: var(--secondaryColor);
+    position: relative;
+}
+
+.Home__Card1 {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 97;
+    margin: 0 6rem;
+    padding: 0 2rem;
+}
+
+.Home__Circle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 450px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to top, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.Home__Caption,
+.Home__Card1Image {
+    z-index: 99;
+}
+
+.Home__Caption,
+.Home__Card1Image {
+    padding: 2rem 2rem;
+}
+
+.Home__Caption1 {
+    font-size: 300%;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.Home__Caption2 {
+    margin-bottom: 50px;
+}
+
+.Home__LearnMore {
+    border: none;
+    text-decoration: none;
+    font-family: 'Belleza', sans-serif;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    transition: 0.5s;
+}
+
+.Home__LearnMore:hover {
+    background-color: var(--mainColorIntermediate);
+    color: var(--secondaryColor);
+}
+
+.Home__Image1 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.Home__Ellipse1 {
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 60%;
+    height: 35%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: whitesmoke;
+    z-index: 90;
+}
+
+.Home__Ellipse2 {
+    position: absolute;
+    top: 82%;
+    right: 0;
+    width: 60%;
+    height: 35%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background: whitesmoke;
+    z-index: 90;
+}
+
+@media only screen and (max-width: 1024px) {
+    .Home__Card1 {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .Home__Caption1 {
+        font-size: 250%;
+    }
+
+    .Home__Circle {
+        top: 1%;
+        left: 50%;
+        width: 900px;
+        height: 900px;
+    }
+}

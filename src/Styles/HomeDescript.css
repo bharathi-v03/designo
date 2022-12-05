@@ -1,0 +1,89 @@
+.Descript__Card {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding: 0 6rem;
+    z-index: 97;
+    padding-bottom: 6rem;
+}
+
+.Descript__Card1,
+.Descript__Card2,
+.Descript__Card3 {
+    padding: 0 1rem;
+    position: relative;
+    z-index: 97;
+}
+
+.Descript__Image {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    z-index: 99;
+}
+
+.Descript__Caption {
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    color: var(--textColor);
+    text-align: center;
+}
+
+.Descript__Caption1 {
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.Descript__Circle1,
+.Descript__Circle2,
+.Descript__Circle3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    z-index: 98;
+}
+
+.Descript__Circle1 {
+    background: linear-gradient(to bottom, rgb(223, 223, 223), var(--secondaryColor));
+}
+
+.Descript__Circle2 {
+    background: linear-gradient(to left, rgb(223, 223, 223), var(--secondaryColor));
+}
+
+.Descript__Circle3 {
+    background: linear-gradient(to top, rgb(223, 223, 223), var(--secondaryColor));
+}
+
+@media only screen and (max-width: 1024px) {
+    .Descript__Card {
+        flex-direction: column;
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .Descript__Card1,
+    .Descript__Card2,
+    .Descript__Card3 {
+        padding: 1rem 0;
+    }
+
+    .Descript__Image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+    }
+
+    .Descript__Circle1,
+    .Descript__Circle2,
+    .Descript__Circle3 {
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,354 @@
+.Company {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    margin-bottom: 6rem;
+    position: relative;
+}
+
+.Company__Card1 {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 97;
+    margin: 0 6rem;
+    height: auto;
+}
+
+.Company__Circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to top, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.Company__Caption,
+.Company__Card1Image {
+    z-index: 99;
+    color: var(--secondaryColor);
+}
+
+.Company__Caption {
+    margin: 6rem;
+}
+
+.Company__Caption1 {
+    font-size: 300%;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.Company__Caption2 {
+    font-size: 120%;
+}
+
+.Company__Card1Image {
+    width: 500px;
+    height: 500px;
+}
+
+.Company__Image1 {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.Company__Card2,
+.Company__Card3 {
+    background-color: var(--mainColorLight);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 97;
+    margin: 0 6rem;
+    height: auto;
+}
+
+.Company__Card2 {
+    flex-direction: row-reverse;
+}
+
+.Company__Card3 {
+    flex-direction: row;
+}
+
+.Company__Caption1A {
+    color: var(--mainColor);
+}
+
+.Company__Caption2A {
+    color: var(--textColor);
+}
+
+.Company__Caption3 {
+    margin-top: 30px;
+    color: var(--textColor);
+}
+
+.Company__Card1ImageA {
+    width: 500px;
+    height: 600px;
+}
+
+.Company__Image1A {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+}
+
+.Company__Descript__Card {
+    padding-bottom: 0;
+    justify-content: space-around;
+}
+
+.Company__Descript__Card1,
+.Company__Descript__Card2,
+.Company__Descript__Card3 {
+    cursor: pointer;
+}
+
+.Company__Descript__Card1:hover>.Company__Descript__Image,
+.Company__Descript__Card2:hover>.Company__Descript__Image,
+.Company__Descript__Card3:hover>.Company__Descript__Image {
+    transform: scale(1.1);
+}
+
+.Company__Descript__Image {
+    transition: 0.5s;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    z-index: 99;
+}
+
+.Company__Descript__Circle1,
+.Company__Descript__Circle2,
+.Company__Descript__Circle3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    z-index: 98;
+}
+
+.Company__Descript__Circle1 {
+    background: linear-gradient(to bottom, rgb(223, 223, 223), var(--secondaryColor));
+}
+
+.Company__Descript__Circle2 {
+    background: linear-gradient(to left, rgb(223, 223, 223), var(--secondaryColor));
+}
+
+.Company__Descript__Circle3 {
+    background: linear-gradient(to top, rgb(223, 223, 223), var(--secondaryColor));
+}
+
+.Company__Ellipse1 {
+    top: 2%;
+}
+
+.Company__Ellipse2 {
+    top: 62%
+}
+
+.Company__Descript__Caption {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.Location__Btn__Div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Location__Button {
+    border: none;
+    text-decoration: none;
+    font-family: 'Belleza', sans-serif;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    color: var(--secondaryColor);
+    transition: 0.5s;
+}
+
+.Location__Btn__Div:hover>.Location__Button {
+    background-color: var(--mainColorIntermediate);
+    color: var(--secondaryColor);
+}
+
+.Company__Circles,
+.Company__Circles2 {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+
+.Company__Circles {
+    align-items: flex-end;
+}
+
+.Company__Circles2 {
+    align-items: flex-start;
+}
+
+.Company__CircleR1,
+.Company__CircleR2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.Company__Circle1 {
+    width: 300px;
+    height: 300px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to right, rgb(243, 198, 243), transparent);
+    z-index: 98;
+}
+
+.Company__Circle2 {
+    width: 300px;
+    height: 300px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to top, rgb(243, 198, 243), transparent);
+    z-index: 98;
+}
+
+.Company__Circle3 {
+    width: 300px;
+    height: 300px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to left, rgb(243, 198, 243), transparent);
+    z-index: 98;
+}
+
+.Company__Circle4 {
+    width: 300px;
+    height: 300px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to bottom, rgb(243, 198, 243), transparent);
+    z-index: 98;
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .Company__Card1,
+    .Company__Card2,
+    .Company__Card3 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .Company__Caption {
+        margin: 5vw;
+    }
+
+    .Company__Caption1 {
+        font-size: 250%;
+        margin-bottom: 20px;
+    }
+
+    .Company__Caption2 {
+        font-size: initial;
+    }
+
+    .Company__Card1Image {
+        width: calc(100vw - 12rem);
+        height: calc(50vw - 12rem);
+    }
+
+    .Company__Image1 {
+        width: calc(100vw - 12rem);
+        height: calc(50vw - 12rem);
+        object-fit: cover;
+    }
+
+    .Company__Circle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .Company {
+        row-gap: 0;
+        margin-bottom: 2rem;
+    }
+
+    .Company__Card1,
+    .Company__Card2,
+    .Company__Card3 {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .Company__Caption1 {
+        font-size: 200%;
+        margin-bottom: 10px;
+    }
+
+    .Company__Card1Image {
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .Company__Image1 {
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .Company__Caption3 {
+        margin-top: 10px;
+    }
+
+    .Company__Descript__Card {
+        padding: 0 1rem;
+    }
+
+    .Company__Descript__Card1,
+    .Company__Descript__Card2,
+    .Company__Descript__Card3 {
+        padding: 0.5rem 0;
+    }
+
+    .Company__Descript__Image {
+        position: relative;
+        height: 175px;
+        width: 175px;
+    }
+
+    .Company__Descript__Circle1,
+    .Company__Descript__Circle2,
+    .Company__Descript__Circle3 {
+        width: 130px;
+        height: 130px;
+    }
+}

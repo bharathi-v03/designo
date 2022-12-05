@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Footer {
+    color: var(--secondaryColor);
+    position: relative;
+    z-index: 99;
+}
+
+.Footer__Card {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 97;
+    margin: 0 6rem;
+    padding: 2rem;
+}
+
+.Footer__Caption,
+.Footer__ButtonDiv {
+    z-index: 99;
+}
+
+.Footer__Caption {
+    flex: 70%;
+}
+
+.Footer__ButtonDiv {
+    flex: 30%;
+    text-align: center;
+}
+
+.Footer__Caption1 {
+    font-size: 300%;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.Footer__Caption2 {
+    padding: 10px;
+}
+
+.Footer__Button {
+    border: none;
+    text-decoration: none;
+    font-family: 'Belleza', sans-serif;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    transition: 0.5s;
+}
+
+.Footer__Button:hover {
+    background-color: var(--mainColorIntermediate);
+    color: var(--secondaryColor);
+}
+
+.Footer__Circle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+
+.Footer__CircleR1,
+.Footer__CircleR2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.Footer__Circle1 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to right, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.Footer__Circle2 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to top, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.Footer__Circle3 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to left, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.Footer__Circle4 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to bottom, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+@media only screen and (max-width: 1024px) {
+    .Footer__Card {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 2rem;
+        padding: 2rem;
+    }
+
+    .Footer__Caption1 {
+        font-size: 250%;
+        padding: 0;
+    }
+
+    .Footer__Caption2 {
+        padding: 20px 0px;
+    }
+
+    .Footer__Circle1,
+    .Footer__Circle2,
+    .Footer__Circle3,
+    .Footer__Circle4 {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* ================================================================================= */
+
+.Footer__Block {
+    color: var(--secondaryColor);
+    background-color: var(--footerColor);
+    width: 100%;
+    z-index: 95;
+    margin-top: -6rem;
+    padding-top: 6rem;
+}
+
+.Footer__Header {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    background-color: var(--footerColor);
+    color: var(--secondaryColor);
+    padding: 0 6rem;
+}
+
+.Footer__Brand {
+    text-decoration: none;
+}
+
+.Footer__Logo {
+    width: 20px;
+    height: 20px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: conic-gradient(var(--mainColor), var(--secondaryColor));
+}
+
+.Footer__Title {
+    padding-left: 7px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--secondaryColor);
+}
+
+.Footer__Link1,
+.Footer__Link2,
+.Footer__Link3 {
+    color: var(--secondaryColor);
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
+
+.Footer__Link1:hover,
+.Footer__Link2:hover,
+.Footer__Link3:hover {
+    box-shadow: 0px 2px var(--mainColor);
+    padding-bottom: 5px;
+    transition-timing-function: ease-in-out;
+}
+
+.Footer__Link1,
+.Footer__Link2 {
+    margin-right: 3rem;
+}
+
+.Footer__Header div,
+.Footer__Brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.Footer__Items {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    height: 30px;
+    text-align: center;
+}
+
+.hr__Line1 {
+    display: none;
+    background: rgb(208, 208, 208);
+}
+
+.hr__Line2 {
+    background: rgb(208, 208, 208);
+    margin: 0 6rem;
+    border: none;
+    height: 1px;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .Footer__Header {
+        display: block;
+        width: 100%;
+        height: 170px;
+        padding: 0;
+    }
+
+    .Footer__Link1,
+    .Footer__Link2,
+    .Footer__Link3 {
+        margin-right: 0;
+        padding: 5px;
+    }
+
+    .Footer__Brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .Footer__Items {
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        height: 30px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hr__Line1 {
+        display: block;
+        margin: 0 2rem;
+        border: none;
+        height: 1px;
+    }
+
+    .hr__Line2 {
+        display: none;
+    }
+}
+
+/* ================================================================== */
+
+.Footer__Below {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 6rem;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 25px;
+}
+
+.Footer__Address,
+.Footer__Contact {
+    color: rgb(208, 208, 208);
+}
+
+.Footer__Icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    font-size: 20px;
+    column-gap: 15px;
+    color: var(--mainColor);
+}
+
+.fb,
+.yt,
+.tw,
+.ps,
+.insta {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fb:hover,
+.yt:hover,
+.tw:hover,
+.ps:hover,
+.insta:hover {
+    transform: scale(1.3);
+    color: rgb(208, 208, 208);
+}
+
+@media only screen and (max-width: 1024px) {
+    .Footer__Below {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .Footer__Below div {
+        padding: 1rem;
+    }
+}

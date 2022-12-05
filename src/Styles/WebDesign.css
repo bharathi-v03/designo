@@ -1,0 +1,328 @@
+.WebDesign {
+    position: relative;
+}
+
+.WebDesign__Card {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 97;
+    margin: 0 6rem;
+    padding: 2rem;
+}
+
+.WebDesign__Caption {
+    z-index: 99;
+    color: var(--secondaryColor);
+}
+
+.WebDesign__Caption1 {
+    font-size: 300%;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.WebDesign__Caption2 {
+    padding: 10px;
+    font-size: 110%;
+    width: 30rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.WebDesign__Circle {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+
+.WebDesign__CircleR1,
+.WebDesign__CircleR2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.WebDesign__Circle1 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to right, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.WebDesign__Circle2 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to top, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.WebDesign__Circle3 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to left, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.WebDesign__Circle4 {
+    width: 200px;
+    height: 200px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to bottom, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+.Design__Ellipse1 {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    width: 70%;
+    height: 30%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: whitesmoke;
+    z-index: 90;
+}
+
+@media only screen and (max-width: 1024px) {
+    .WebDesign__Card {
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        border-radius: 0;
+        padding: 2rem;
+    }
+
+    .WebDesign__Caption1 {
+        font-size: 250%;
+        padding: 0;
+    }
+
+    .WebDesign__Caption2 {
+        font-size: 90%;
+        padding: 20px 0px;
+        width: auto;
+    }
+
+    .WebDesign__Circle1,
+    .WebDesign__Circle2,
+    .WebDesign__Circle3,
+    .WebDesign__Circle4 {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* =============================================================== */
+
+.WebDesign__Projects {
+    position: relative;
+    z-index: 99;
+    padding: 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3rem;
+    column-gap: 1rem;
+}
+
+.WebDesign__Pjs {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.WebDesign__PImg {
+    width: 400px;
+    height: 400px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.WebDesign__JPG {
+    width: 400px;
+    height: 400px;
+    object-position: top;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.WebDesign__PCaption {
+    text-align: center;
+    background: var(--mainColorLight);
+    padding: 2rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+}
+
+.WebDesign__PTitle {
+    padding-bottom: 0.5rem;
+    font-size: large;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.WebDesign__PSubTitle {
+    font-size: 100%;
+    color: var(--textColor);
+}
+
+.WebDesign__Pjs:hover>.WebDesign__PCaption>.WebDesign__PTitle,
+.WebDesign__Pjs:hover>.WebDesign__PCaption>.WebDesign__PSubTitle {
+    color: var(--secondaryColor);
+}
+
+.WebDesign__Pjs:hover>.WebDesign__PCaption {
+    background: var(--mainColor);
+}
+
+.WebDesign__Pjs:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1486px) {
+    .WebDesign__Projects {
+        justify-content: space-evenly;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    .WebDesign__Projects {
+        padding: 2rem;
+        row-gap: 1rem;
+    }
+
+    .WebDesign__Pjs {
+        width: auto;
+    }
+
+    .WebDesign__PImg,
+    .WebDesign__JPG {
+        width: calc(100vw - 4rem);
+        height: calc(100vw - 4rem);
+    }
+
+    .WebDesign__PCaption {
+        padding: 1rem;
+    }
+
+    .WebDesign__PTitle {
+        padding-bottom: 0.25rem;
+        font-size: medium;
+        font-weight: bold;
+    }
+
+    .WebDesign__PSubTitle {
+        font-size: 90%;
+    }
+}
+
+/* ==================================================================== */
+
+.InnerPage__Card {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: auto;
+    padding: 0 6rem;
+    padding-bottom: 6rem;
+    column-gap: 20px;
+}
+
+.InnerPage__Card1,
+.InnerPage__Card2 {
+    flex: 50%;
+    cursor: pointer;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 97;
+    transition: 0.5s;
+}
+
+.InnerPage__Card__Caption {
+    position: absolute;
+    z-index: 98;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondaryColor);
+    text-align: center;
+    width: 100%;
+}
+
+.InnerPage__Card__Caption1 {
+    font-size: 250%;
+    margin-bottom: 20px;
+}
+
+.gt {
+    color: var(--mainColor);
+    font-weight: 900;
+}
+
+.InnerPage__webDesign,
+.InnerPage__appDesign,
+.InnerPage__graphicDesign {
+    filter: grayscale(100%) brightness(40%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.InnerPage__Card1:hover>.InnerPage__appDesign,
+.InnerPage__Card2:hover>.InnerPage__graphicDesign {
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 1024px) {
+    .InnerPage__Card {
+        flex-direction: column;
+        row-gap: 2rem;
+        height: calc(100vw - 4rem);
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .InnerPage__Card__Caption1 {
+        font-size: 150%;
+    }
+
+    .InnerPage__Card__Caption2 {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .InnerPage__Card {
+        height: calc((100vw)*2 - 4rem);
+    }
+}

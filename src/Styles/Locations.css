@@ -1,0 +1,153 @@
+.Location {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    margin-bottom: 6rem;
+}
+
+.leaflet-container,
+.map {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    z-index: 99;
+}
+
+.Location__Card1,
+.Location__Card2,
+.Location__Card3 {
+    background-color: var(--mainColorLight);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 97;
+    margin: 0 6rem;
+    height: auto;
+    row-gap: 1rem;
+}
+
+.Location__Card1,
+.Location__Card3 {
+    flex-direction: row;
+}
+
+.Location__Card2 {
+    flex-direction: row-reverse;
+}
+
+.Location__Caption {
+    z-index: 99;
+    margin: 6rem;
+    line-height: 30px;
+    flex-grow: 1;
+}
+
+.Location__Sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Location__AddCont {
+    margin-right: auto;
+}
+
+.Location__Title {
+    font-size: 300%;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--mainColor);
+}
+
+.Location__Caption2 {
+    font-size: 120%;
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.Location__Caption3,
+.Location__Caption4 {
+    color: var(--textColor);
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .Location__Card1,
+    .Location__Card2,
+    .Location__Card3 {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .Location__AddCont {
+        margin: 5vw;
+    }
+
+    .Location__Title {
+        font-size: 250%;
+        margin-bottom: 20px;
+    }
+
+    .Location__Caption2 {
+        font-size: initial;
+    }
+
+    .map,
+    .leaflet-container {
+        width: calc(100vw - 12rem);
+        height: calc(50vw - 12rem);
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .Location {
+        row-gap: 0;
+        margin-bottom: 2rem;
+    }
+
+    .Location__Card1,
+    .Location__Card2,
+    .Location__Card3 {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .Location__Title {
+        font-size: 200%;
+        margin-bottom: 10px;
+    }
+
+    .Location__Caption2,
+    .Location__Caption3,
+    .Location__Caption4 {
+        margin-top: 10px;
+    }
+
+    .map,
+    .leaflet-container {
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .Location__Caption {
+        z-index: 99;
+        margin: 5vw;
+        line-height: normal;
+    }
+
+    .Location__Sections {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    .map,
+    .leaflet-container {
+        width: 100vw;
+        height: 100vw;
+    }
+}

@@ -1,0 +1,192 @@
+.Contact {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6rem;
+    margin-bottom: 6rem;
+}
+
+.Contact__Form__Div,
+.Contact__Form {
+    width: 500px;
+    margin-right: 6rem;
+    height: 500px;
+    position: relative;
+    z-index: 99;
+}
+
+.Contact__Form {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Contact__Input__Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    height: 40px;
+}
+
+.Contact__Message__Div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.Contact__Error,
+.Contact__ErrorM {
+    position: absolute;
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    top: auto;
+    right: 0;
+    color: var(--secondaryColor);
+    font-style: italic;
+    font-size: 80%;
+}
+
+.Contact__ErrorM {
+    top: 1rem
+}
+
+.Contact__Error span,
+.Contact__ErrorM span {
+    color: var(--secondaryColor);
+    width: 13px;
+    height: 13px;
+}
+
+.Contact__Input {
+    border: 0;
+    height: 40px;
+    padding: 0 1rem;
+    flex-grow: 1;
+    background-color: transparent;
+    color: var(--secondaryColor);
+    border-bottom: 1px solid var(--secondaryColor);
+    font-family: 'Belleza', sans-serif;
+    transition: 0.5s;
+}
+
+.Contact__Input::placeholder {
+    color: var(--secondaryColor);
+}
+
+.Contact__Input:focus {
+    outline: none !important;
+    box-shadow: 0 -8px 0px -6px var(--secondaryColor) inset;
+}
+
+.Contact__Message {
+    position: relative;
+    border: 0;
+    padding: 1rem;
+    flex-grow: 1;
+    background-color: transparent;
+    color: var(--secondaryColor);
+    border-bottom: 1px solid var(--secondaryColor);
+    font-family: 'Belleza', sans-serif;
+    transition: 0.5s;
+    resize: none;
+}
+
+.Contact__Message::placeholder {
+    color: var(--secondaryColor);
+}
+
+.Contact__Message:focus {
+    outline: none !important;
+    box-shadow: 0 -8px 0px -6px var(--secondaryColor) inset;
+}
+
+.Contact__Button__Div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Contact__Button {
+    border: none;
+    text-decoration: none;
+    font-family: 'Belleza', sans-serif;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--secondaryColor);
+    color: var(--textColor);
+    transition: 0.5s;
+}
+
+.Contact__Button:hover {
+    background-color: var(--mainColorIntermediate);
+    color: var(--secondaryColor);
+}
+
+.Contact__Cicle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: linear-gradient(to top, var(--mainColor), var(--mainColorIntermediate));
+    z-index: 98;
+}
+
+@media only screen and (max-width: 1240px) {
+
+    .Contact__Company__Card1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Contact__Form__Div,
+    .Contact__Form {
+        width: 500px;
+        height: 500px;
+        margin-right: 0;
+    }
+
+    .Contact__Form {
+        padding: 3rem 0;
+    }
+
+    .Contact__Input__Div {
+        height: 40px;
+    }
+
+    .Contact__ErrorM {
+        top: 1rem
+    }
+
+    .Contact__Input {
+        height: 40px;
+        padding: 0 1rem;
+        flex-grow: 1;
+    }
+
+    .Contact__Message {
+        padding: 1rem;
+        flex-grow: 1;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+
+    .Contact__Form__Div,
+    .Contact__Form {
+        width: calc(100vw - 10vw);
+        height: auto;
+    }
+
+    .Contact__Form {
+        padding: 0;
+        padding-bottom: 2rem;
+        row-gap: 1rem;
+    }
+}
