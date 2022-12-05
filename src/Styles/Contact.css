@@ -178,6 +178,11 @@
 
 @media only screen and (max-width: 540px) {
 
+    .Contact {
+        row-gap: 0rem;
+        margin-bottom: 0rem;
+    }
+
     .Contact__Form__Div,
     .Contact__Form {
         width: calc(100vw - 10vw);
