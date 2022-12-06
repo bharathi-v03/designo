@@ -6,6 +6,7 @@ import "../Styles/HomeDesign.css";
 import "../Styles/HomeDescript.css";
 import webDesign from "../Images/webDesign.jpg";
 import graphicDesign from "../Images/graphicDesign.jpg";
+import { motion } from "framer-motion";
 
 function AppDesign() {
 
@@ -50,7 +51,11 @@ function AppDesign() {
 
     return (
         <div className='WebDesign'>
-            <div className='WebDesign__Card'>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className='WebDesign__Card'>
                 <div className='WebDesign__Caption'>
                     <p className='WebDesign__Caption1'>App Design</p>
                     <p className='WebDesign__Caption2'>Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.</p>
@@ -68,9 +73,13 @@ function AppDesign() {
                         <div className='WebDesign__Circle1' />
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className='Design__Ellipse1' />
-            <div className='WebDesign__Projects'>
+            <motion.div
+                initial={{ y: 200 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true }}
+                className='WebDesign__Projects'>
                 {AppDesignJson.map((ele, key) => {
                     return (
                         <div key={key} className='WebDesign__Pjs'>
@@ -84,8 +93,12 @@ function AppDesign() {
                         </div>
                     )
                 })}
-            </div>
-            <div className='InnerPage__Card'>
+            </motion.div>
+            <motion.div
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                className='InnerPage__Card'>
                 <div className='InnerPage__Card1' onClick={() => navigate('/webDesign')}>
                     <img className='InnerPage__appDesign' src={webDesign} alt='' />
                     <div className='InnerPage__Card__Caption'>
@@ -100,7 +113,7 @@ function AppDesign() {
                         <p className='InnerPage__Card__Caption2'>VIEW PROJECTS <span className='gt'>{">"}</span></p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

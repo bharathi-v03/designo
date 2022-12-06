@@ -81,7 +81,7 @@
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     background: whitesmoke;
-    z-index: 90;
+    z-index: 0;
 }
 
 .Home__Ellipse2 {
@@ -94,7 +94,7 @@
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
     background: whitesmoke;
-    z-index: 90;
+    z-index: 0;
 }
 
 @media only screen and (max-width: 1024px) {

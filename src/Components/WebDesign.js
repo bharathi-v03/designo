@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import "../Styles/WebDesign.css"
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import "../Styles/Home.css";
 import "../Styles/HomeDesign.css";
 import "../Styles/HomeDescript.css";
 import appDesign from "../Images/appDesign.jpg";
 import graphicDesign from "../Images/graphicDesign.jpg";
+import { motion } from "framer-motion";
 
 function WebDesign() {
 
@@ -50,7 +51,11 @@ function WebDesign() {
 
     return (
         <div className='WebDesign'>
-            <div className='WebDesign__Card'>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className='WebDesign__Card'>
                 <div className='WebDesign__Caption'>
                     <p className='WebDesign__Caption1'>Web Design</p>
                     <p className='WebDesign__Caption2'>We build websites that serve as powerful marketing tools and bring memorable brand experiences.</p>
@@ -68,9 +73,13 @@ function WebDesign() {
                         <div className='WebDesign__Circle1' />
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className='Design__Ellipse1' />
-            <div className='WebDesign__Projects'>
+            <motion.div
+                initial={{ y: 200 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true }}
+                className='WebDesign__Projects'>
                 {WebDesignJson.map((ele, key) => {
                     return (
                         <div key={key} className='WebDesign__Pjs'>
@@ -84,8 +93,12 @@ function WebDesign() {
                         </div>
                     )
                 })}
-            </div>
-            <div className='InnerPage__Card'>
+            </motion.div>
+            <motion.div
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                className='InnerPage__Card'>
                 <div className='InnerPage__Card1' onClick={() => navigate('/appDesign')}>
                     <img className='InnerPage__appDesign' src={appDesign} alt='' />
                     <div className='InnerPage__Card__Caption'>
@@ -100,7 +113,7 @@ function WebDesign() {
                         <p className='InnerPage__Card__Caption2'>VIEW PROJECTS <span className='gt'>{">"}</span></p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

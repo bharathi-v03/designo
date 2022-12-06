@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
-import "../Styles/Locations.css"
+import "../Styles/Locations.css";
+import { motion } from "framer-motion";
 
 function Locations() {
 
@@ -24,7 +25,12 @@ function Locations() {
 
     return (
         <div className='Location'>
-            <div className='Location__Card1'>
+            <motion.div
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Location__Card1'>
                 <div className='Location__Caption'>
                     <p className='Location__Title'>Canada</p>
                     <div className='Location__Sections'>
@@ -50,8 +56,13 @@ function Locations() {
                         </Marker>
                     </MapContainer>
                 </div>
-            </div>
-            <div className='Location__Card2'>
+            </motion.div>
+            <motion.div
+                initial={{ x: -200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Location__Card2'>
                 <div className='Location__Caption'>
                     <p className='Location__Title'>Australia</p>
                     <div className='Location__Sections'>
@@ -77,8 +88,13 @@ function Locations() {
                         </Marker>
                     </MapContainer>
                 </div>
-            </div>
-            <div className='Location__Card3'>
+            </motion.div>
+            <motion.div
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Location__Card3'>
                 <div className='Location__Caption'>
                     <p className='Location__Title'>United Kingdom</p>
                     <div className='Location__Sections'>
@@ -104,7 +120,7 @@ function Locations() {
                         </Marker>
                     </MapContainer>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

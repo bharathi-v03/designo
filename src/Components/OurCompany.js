@@ -7,6 +7,7 @@ import image3 from "../Images/OurCompany/image3.jpeg";
 import toronto from "../Images/toronto.svg"
 import sydney from "../Images/sydney.svg"
 import london from "../Images/london.svg"
+import { motion } from "framer-motion";
 
 function OurCompany() {
 
@@ -18,7 +19,12 @@ function OurCompany() {
 
     return (
         <div className='Company'>
-            <div className='Company__Card1'>
+            <motion.div
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Company__Card1'>
                 <div className='Company__Circle' />
                 <div className='Company__Caption'>
                     <p className='Company__Caption1'>About Us</p>
@@ -27,9 +33,14 @@ function OurCompany() {
                 <div className='Company__Card1Image'>
                     <img className='Company__Image1' src={image1} alt='' />
                 </div>
-            </div>
+            </motion.div>
             <div className='Home__Ellipse1 Company__Ellipse1' />
-            <div className='Company__Card2'>
+            <motion.div
+                initial={{ x: -200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Company__Card2'>
                 <div className='Company__Caption'>
                     <p className='Company__Caption1 Company__Caption1A'>World-class talent</p>
                     <p className='Company__Caption2 Company__Caption2A'>We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully crafted from concept to launch, ensuring success in its given market. We are constantly updating our skills in a myriad of platforms.</p>
@@ -47,10 +58,15 @@ function OurCompany() {
                         <div className='Company__Circle2' />
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className='Home__Ellipse2 Company__Ellipse2' />
             <div className='Descript__Card Company__Descript__Card'>
-                <div className='Descript__Card1 Company__Descript__Card1'>
+                <motion.div
+                    initial={{ y: 200 }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    className='Descript__Card1 Company__Descript__Card1'>
                     <div className='Descript__Image Company__Descript__Image'>
                         <img className='Descript__Image Company__Descript__Image' src={toronto} alt='' />
                         <div className='Descript__Circle1 Company__Descript__Circle1' />
@@ -61,8 +77,13 @@ function OurCompany() {
                     <div className='Location__Btn__Div'>
                         <button className='Location__Button' onClick={() => navigate('/location')}>SEE LOCATION</button>
                     </div>
-                </div>
-                <div className='Descript__Card2 Company__Descript__Card2'>
+                </motion.div>
+                <motion.div
+                    initial={{ y: 200 }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='Descript__Card2 Company__Descript__Card2'>
                     <div className='Descript__Image Company__Descript__Image'>
                         <img className='Descript__Image Company__Descript__Image' src={sydney} alt='' />
                         <div className='Descript__Circle2 Company__Descript__Circle2' />
@@ -73,8 +94,13 @@ function OurCompany() {
                     <div className='Location__Btn__Div'>
                         <button className='Location__Button' onClick={() => navigate('/location')}>SEE LOCATION</button>
                     </div>
-                </div>
-                <div className='Descript__Card3 Company__Descript__Card3'>
+                </motion.div>
+                <motion.div
+                    initial={{ y: 200 }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.9 }}
+                    className='Descript__Card3 Company__Descript__Card3'>
                     <div className='Descript__Image Company__Descript__Image'>
                         <img className='Descript__Image Company__Descript__Image' src={london} alt='' />
                         <div className='Descript__Circle3 Company__Descript__Circle3' />
@@ -85,9 +111,14 @@ function OurCompany() {
                     <div className='Location__Btn__Div'>
                         <button className='Location__Button' onClick={() => navigate('/location')}>SEE LOCATION</button>
                     </div>
-                </div>
+                </motion.div>
             </div>
-            <div className='Company__Card3'>
+            <motion.div
+                initial={{ x: 200 }}
+                whileInView={{ x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Company__Card3'>
                 <div className='Company__Caption'>
                     <p className='Company__Caption1 Company__Caption1A'>The real deal</p>
                     <p className='Company__Caption2 Company__Caption2A'>As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. We make design and technology more accessible and give you tools to measure success.</p>
@@ -105,7 +136,7 @@ function OurCompany() {
                         <div className='Company__Circle2' />
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

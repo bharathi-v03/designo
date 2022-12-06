@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom"
 import toronto from "../Images/toronto.svg"
 import sydney from "../Images/sydney.svg"
 import london from "../Images/london.svg"
-import { HiExclamationCircle } from "react-icons/hi"
+import { HiExclamationCircle } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 function Contact() {
 
@@ -48,7 +49,11 @@ function Contact() {
 
     return (
         <div className='Contact'>
-            <div className='Company__Card1 Contact__Company__Card1'>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className='Company__Card1 Contact__Company__Card1'>
                 <div className='Contact__Cicle' />
                 <div className='Company__Caption'>
                     <p className='Company__Caption1'>Contact Us</p>
@@ -76,9 +81,14 @@ function Contact() {
                         </div>
                     </form>
                 </div>
-            </div>
+            </motion.div>
             <div className='Descript__Card Company__Descript__Card'>
-                <div className='Descript__Card1 Company__Descript__Card1'>
+                <motion.div
+                    initial={{ y: 200 }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    className='Descript__Card1 Company__Descript__Card1'>
                     <div className='Descript__Image Company__Descript__Image'>
                         <img className='Descript__Image Company__Descript__Image' src={toronto} alt='' />
                         <div className='Descript__Circle1 Company__Descript__Circle1' />
@@ -89,8 +99,13 @@ function Contact() {
                     <div className='Location__Btn__Div'>
                         <button className='Location__Button' onClick={() => navigate('/location')}>SEE LOCATION</button>
                     </div>
-                </div>
-                <div className='Descript__Card2 Company__Descript__Card2'>
+                </motion.div>
+                <motion.div
+                    initial={{ y: 200 }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='Descript__Card2 Company__Descript__Card2'>
                     <div className='Descript__Image Company__Descript__Image'>
                         <img className='Descript__Image Company__Descript__Image' src={sydney} alt='' />
                         <div className='Descript__Circle2 Company__Descript__Circle2' />
@@ -101,8 +116,13 @@ function Contact() {
                     <div className='Location__Btn__Div'>
                         <button className='Location__Button' onClick={() => navigate('/location')}>SEE LOCATION</button>
                     </div>
-                </div>
-                <div className='Descript__Card3 Company__Descript__Card3'>
+                </motion.div>
+                <motion.div
+                    initial={{ y: 200 }}
+                    whileInView={{ y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.9 }}
+                    className='Descript__Card3 Company__Descript__Card3'>
                     <div className='Descript__Image Company__Descript__Image'>
                         <img className='Descript__Image Company__Descript__Image' src={london} alt='' />
                         <div className='Descript__Circle3 Company__Descript__Circle3' />
@@ -113,7 +133,7 @@ function Contact() {
                     <div className='Location__Btn__Div'>
                         <button className='Location__Button' onClick={() => navigate('/location')}>SEE LOCATION</button>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

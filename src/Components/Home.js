@@ -9,7 +9,8 @@ import appDesign from "../Images/appDesign.jpg";
 import graphicDesign from "../Images/graphicDesign.jpg";
 import passionate from "../Images/passionate.svg"
 import resourceful from "../Images/resourceful.svg"
-import friendly from "../Images/friendly.svg"
+import friendly from "../Images/friendly.svg";
+import { motion } from "framer-motion";
 
 function Home() {
 
@@ -21,7 +22,11 @@ function Home() {
 
     return (
         <div className='Home'>
-            <div className='Home__Card1'>
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className='Home__Card1'>
                 <div className='Home__Circle' />
                 <div className='Home__Caption'>
                     <p className='Home__Caption1'>Award-winning custom designs and digital branding solutions</p>
@@ -31,10 +36,16 @@ function Home() {
                 <div className='Home__Card1Image'>
                     <img className='Home__Image1' src={homeCard} alt='' />
                 </div>
-            </div>
+            </motion.div>
             <div className='Home__Ellipse1' />
-            <div className='Design__Card'>
-                <div className='Design__Card1' onClick={() => navigate('/webDesign')}>
+            <motion.div
+                initial={{ y: 100 }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className='Design__Card'>
+                <div
+                    className='Design__Card1' onClick={() => navigate('/webDesign')}>
                     <img className='webDesign' src={webDesign} alt='' />
                     <div className='Card__Caption'>
                         <p className='Card__Caption1'>WEB DESIGN</p>
@@ -57,10 +68,15 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <div className='Home__Ellipse2' />
             <div className='Descript__Card'>
-                <div className='Descript__Card1'>
+                <motion.div
+                    initial={{ x: 200 }}
+                    whileInView={{ x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3 }}
+                    className='Descript__Card1'>
                     <div className='Descript__Image'>
                         <img className='Descript__Image' src={passionate} alt='' />
                         <div className='Descript__Circle1' />
@@ -69,8 +85,13 @@ function Home() {
                         <p className='Descript__Caption1'>PASSIONATE</p>
                         <p className='Descript__Caption2'>Each project starts with an in-depth brand research to ensure we only create products that serve a purpose. We merge art, design, and technology into exciting new solutions.</p>
                     </div>
-                </div>
-                <div className='Descript__Card2'>
+                </motion.div>
+                <motion.div
+                    initial={{ x: 200 }}
+                    whileInView={{ x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                    className='Descript__Card2'>
                     <div className='Descript__Image'>
                         <img className='Descript__Image' src={resourceful} alt='' />
                         <div className='Descript__Circle2' />
@@ -79,8 +100,13 @@ function Home() {
                         <p className='Descript__Caption1'>RESOURCEFUL</p>
                         <p className='Descript__Caption2'>Everythind that we do has a strategic purpose. We use an agile approach in all of our projects and value customer collaboration. It guarantees superios results that fulfill our clients' needs.</p>
                     </div>
-                </div>
-                <div className='Descript__Card3'>
+                </motion.div>
+                <motion.div
+                    initial={{ x: 200 }}
+                    whileInView={{ x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.9 }}
+                    className='Descript__Card3'>
                     <div className='Descript__Image'>
                         <img className='Descript__Image' src={friendly} alt='' />
                         <div className='Descript__Circle3' />
@@ -89,7 +115,7 @@ function Home() {
                         <p className='Descript__Caption1'>FRIENDLY</p>
                         <p className='Descript__Caption2'>We are a group of enthusiastic folks who know how to put people first. Our success depends on our customers, and we strive to give them the best experience a company can provide.</p>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
