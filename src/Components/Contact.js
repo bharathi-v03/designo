@@ -11,15 +11,18 @@ function Contact() {
 
     const navigate = useNavigate();
 
+    // states to show if the input is empty in the form submission
     const [sname, setName] = useState(true);
     const [semail, setEmail] = useState(true);
     const [smessage, setMessage] = useState(true);
 
+    // function that checks the input values and updates the states on the click of submit button
     const checkEmpty = (e) => {
         var name = document.getElementById('name').value;
         var email = document.getElementById('email').value;
         var message = document.getElementById('message').value;
 
+        // if true, error will not be shown and if false, vice versa
         if (name.length !== 0) {
             setName(true);
         }
@@ -47,6 +50,7 @@ function Contact() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // returns divs of a form for contact and locations 
     return (
         <div className='Contact'>
             <motion.div

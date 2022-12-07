@@ -13,6 +13,10 @@ function Footer() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }
 
+    // returns div that:
+    // navigates to contact page
+    // contains logo and other nav links
+    // address, contact and social media
     return (
         <div className='Footer'>
             <motion.div

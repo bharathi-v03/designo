@@ -16,6 +16,7 @@ function GraphicDesign() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // JSON for displaying project cards
     const GraphicDesignJson = [
         {
             "image": require("../Images/GraphicDesign/image1.jpg"),
@@ -34,6 +35,7 @@ function GraphicDesign() {
         }
     ]
 
+    // Displaying projects in graphicDesign page
     return (
         <div className='WebDesign'>
             <motion.div

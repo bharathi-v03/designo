@@ -16,6 +16,7 @@ function WebDesign() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // JSON for displaying project cards
     const WebDesignJson = [
         {
             "image": require("../Images/WebDesign/image1.jpg"),
@@ -49,6 +50,7 @@ function WebDesign() {
         }
     ]
 
+    // Displaying projects in webDesign page
     return (
         <div className='WebDesign'>
             <motion.div

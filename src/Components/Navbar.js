@@ -5,8 +5,12 @@ import "../Styles/Navbar.css";
 import { motion } from "framer-motion";
 
 function Navbar() {
+
+    // to access a DOM element directly
     const navRef = useRef();
 
+    // hold a mutable value in its .current property
+    // onClick add or remove "Navbar__Responsive" className
     const showNavbar = () => {
         navRef.current.classList.toggle("Navbar__Responsive");
     };
@@ -15,6 +19,9 @@ function Navbar() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }
 
+    // returns div that:
+    // contains logo and brand which navigates to homepage
+    // contains nav links of company, location and contact which navigates to their respective pages
     return (
         <header className="Header">
             <Link to='/' className="Navbar__Brand" onClick={() => Scroll()}>

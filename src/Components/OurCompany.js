@@ -17,6 +17,7 @@ function OurCompany() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // about the company and their locations' button to navigate
     return (
         <div className='Company'>
             <motion.div

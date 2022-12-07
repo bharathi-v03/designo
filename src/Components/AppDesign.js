@@ -16,6 +16,7 @@ function AppDesign() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // JSON for displaying project cards
     const AppDesignJson = [
         {
             "image": require("../Images/AppDesign/image1.jpg"),
@@ -49,6 +50,7 @@ function AppDesign() {
         }
     ]
 
+    // Displaying projects in appDesign page
     return (
         <div className='WebDesign'>
             <motion.div

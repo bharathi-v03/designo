@@ -23,6 +23,7 @@ function Locations() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // maps and addresses
     return (
         <div className='Location'>
             <motion.div

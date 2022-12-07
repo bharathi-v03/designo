@@ -20,6 +20,7 @@ function Home() {
         document.body.scrollTop = document.documentElement.scrollTop = 0
     }, [])
 
+    // homepage display
     return (
         <div className='Home'>
             <motion.div
